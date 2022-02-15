@@ -1,16 +1,16 @@
-package com.nix.weather.api;
+package com.nix.weather.impl.openweather.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Weather {
+public class WeatherDescription {
 
-    private String name;
-    private WeatherInfo main;
+    private String main;
+
 }
