@@ -12,6 +12,7 @@
         <module>weather-fetcher-api</module>
         <module>weather-fetcher-impl</module>
         <module>weather-fetcher-features</module>
+        <module>weather-fetcher-docker</module>
     </modules>
 
     <properties>
