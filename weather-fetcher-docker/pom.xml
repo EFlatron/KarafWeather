@@ -21,7 +21,7 @@
             <dependency>
                 <groupId>org.apache.karaf</groupId>
                 <artifactId>karaf-bom</artifactId>
-                <version>4.3.2</version>
+                <version>4.3.6</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>org.apache.karaf.features.extension</artifactId>
-            <version>4.3.2</version>
+            <version>4.3.6</version>
         </dependency>
 
         <dependency>
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>org.apache.karaf.services</groupId>
             <artifactId>org.apache.karaf.services.eventadmin</artifactId>
-            <version>4.3.2</version>
+            <version>4.3.6</version>
         </dependency>
 
         <dependency>
@@ -83,7 +83,7 @@
         <dependency>
             <groupId>org.ops4j.pax.url</groupId>
             <artifactId>pax-url-aether</artifactId>
-            <version>2.6.7</version>
+            <version>2.6.10</version>
             <scope>test</scope>
         </dependency>
 
@@ -108,7 +108,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.configadmin.plugin.interpolation</artifactId>
-            <version>1.1.2</version>
+            <version>1.1.4</version>
         </dependency>
 
         <dependency>
@@ -128,7 +128,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.fileinstall</artifactId>
-            <version>3.6.8</version>
+            <version>3.7.4</version>
         </dependency>
 
         <dependency>
