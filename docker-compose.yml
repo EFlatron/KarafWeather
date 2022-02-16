@@ -1,19 +1,9 @@
-version: '3.2'
+version: "3"
 services:
   karaf:
     build: .
-    volumes:
-      - type: volume
-        source: m2repo
-        target: /root/.m2
     ports:
-      - 1099:1099
-      - 8101:8101
-      - 4444:4444
-      - 8181:8181
-    networks:
-      - sandbox
-networks:
-  sandbox:
-volumes:
-  m2repo:
+      - "8181:8181"
+      - "1099:1099"
+      - "44444:44444"
+      - "8101:8101"
