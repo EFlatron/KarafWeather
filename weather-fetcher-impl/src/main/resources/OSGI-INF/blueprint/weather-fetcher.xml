@@ -32,26 +32,26 @@
         <argument ref="weatherMapper"/>
     </bean>
 
-    <bean id="openWeatherApi" class="com.nix.weather.impl.api.OpenWeatherApiFactory"
+    <bean id="openWeatherApi" class="com.nix.weather.impl.openweather.api.OpenWeatherApiFactory"
     factory-method="create">
-        <argument value="${baseAddress}"/>
+        <argument value="${api.baseAddress}"/>
     </bean>
 
     <bean id="properties" class="com.nix.weather.impl.props.OpenWeatherProperties">
-        <argument value="${appId}"/>
-        <argument value="${units}"/>
-        <argument value="${baseAddress}"/>
+        <argument value="${api.key}"/>
+        <argument value="${api.units}"/>
+        <argument value="${api.baseAddress}"/>
     </bean>
 
     <bean id="weatherMapper" class="com.nix.weather.impl.openweather.mapper.WeatherMapperFactory"
           factory-method="create">
     </bean>
 
-    <cm:property-placeholder persistent-id="props"  update-strategy="reload">
+    <cm:property-placeholder persistent-id="com.nix.api.props" update-strategy="reload">
         <cm:default-properties>
-            <cm:property name="appId" value="5eacb3777c74185f80f1ae9dae8a6d8a"/>
-            <cm:property name="units" value="metric"/>
-            <cm:property name="baseAddress" value="http://api.openweathermap.org"/>
+            <cm:property name="api.key" value="apikey"/>
+            <cm:property name="api.units" value="units"/>
+            <cm:property name="api.baseAddress" value="baseAdress"/>
         </cm:default-properties>
     </cm:property-placeholder>
 

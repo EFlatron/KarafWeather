@@ -11,9 +11,9 @@ import javax.ws.rs.core.MediaType;
 @Path("/")
 public interface WeatherService {
 
-    @Path("/cities/{city}")
+    @Path("/countryCode/{countryCode}/cities/{city}")
     @Produces(MediaType.APPLICATION_JSON)
     @GET
-    WeatherModel getWeatherByCity(@PathParam("city") String city);
+    WeatherModel getWeatherByCity(@PathParam("countryCode") String countryCode, @PathParam("city") String city);
 
-    }
+}

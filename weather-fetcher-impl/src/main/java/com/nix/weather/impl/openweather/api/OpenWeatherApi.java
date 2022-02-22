@@ -1,4 +1,4 @@
-package com.nix.weather.impl.api;
+package com.nix.weather.impl.openweather.api;
 
 import com.nix.weather.impl.openweather.model.OpenWeatherModel;
 

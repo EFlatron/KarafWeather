@@ -9,8 +9,8 @@ import lombok.Getter;
 @EqualsAndHashCode
 public class WeatherModel {
 
-    private String name;
-    private String state;
+    private String city;
+    private String description;
     private double temp;
     private double feelsLike;
     private double tempMin;

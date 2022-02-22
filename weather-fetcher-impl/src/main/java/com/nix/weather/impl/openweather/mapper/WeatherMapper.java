@@ -24,9 +24,14 @@ public interface WeatherMapper {
     @AfterMapping
     default void after(@MappingTarget WeatherModel.WeatherModelBuilder weather, OpenWeatherModel openWeatherModel) {
         if(!openWeatherModel.getWeather().isEmpty()) {
-            weather.state(openWeatherModel.getWeather().get(0).getMain());
+            weather.description(openWeatherModel.getWeather().get(0).getMain());
         } else {
-            weather.state("no description");
+            weather.description("no description");
+        }
+        if(!openWeatherModel.getName().isEmpty()) {
+            weather.city(openWeatherModel.getName());
+        } else {
+            weather.city("city not found");
         }
     }
 }

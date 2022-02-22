@@ -1,4 +1,4 @@
-package com.nix.weather.impl.api;
+package com.nix.weather.impl.openweather.api;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.apache.cxf.jaxrs.client.JAXRSClientFactory;
