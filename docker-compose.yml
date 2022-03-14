@@ -1,9 +1,27 @@
-version: "3"
+version: "3.8"
+
 services:
   karaf:
     build: .
+    container_name: karaf
     ports:
       - "8181:8181"
       - "1099:1099"
       - "44444:44444"
       - "8101:8101"
+    depends_on:
+      - mariadb
+    links:
+      - mariadb
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    hostname: weatherdb
+    environment:
+      MYSQL_DATABASE: weather
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3366:3306"
+    restart: always

@@ -30,10 +30,11 @@
         <argument ref="openWeatherApi"/>
         <argument ref="properties"/>
         <argument ref="weatherMapper"/>
+        <argument ref="requestInfoRepository"/>
     </bean>
 
     <bean id="openWeatherApi" class="com.nix.weather.impl.openweather.api.OpenWeatherApiFactory"
-    factory-method="create">
+          factory-method="create">
         <argument value="${api.baseAddress}"/>
     </bean>
 
@@ -47,11 +48,13 @@
           factory-method="create">
     </bean>
 
+    <reference id="requestInfoRepository" interface="com.nix.weather.persistence.repository.RequestInfoRepository"/>
+
     <cm:property-placeholder persistent-id="com.nix.api.props" update-strategy="reload">
         <cm:default-properties>
             <cm:property name="api.key" value="apikey"/>
             <cm:property name="api.units" value="units"/>
-            <cm:property name="api.baseAddress" value="baseAdress"/>
+            <cm:property name="api.baseAddress" value="baseAddress"/>
         </cm:default-properties>
     </cm:property-placeholder>
 
