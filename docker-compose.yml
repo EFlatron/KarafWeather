@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   karaf:
-    build: .
+    build: weather-fetcher
     container_name: karaf
     ports:
       - "8181:8181"
@@ -25,3 +25,12 @@ services:
     ports:
       - "3366:3306"
     restart: always
+  app:
+    build: weather-fetcher-stats
+    container_name: app
+    ports:
+      - 8080:8080
+    depends_on:
+      - mariadb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://mariadb:3306/weather
